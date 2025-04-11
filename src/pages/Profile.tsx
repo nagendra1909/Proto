@@ -121,7 +121,7 @@ const Profile = () => {
     { icon: <Heart size={20} />, label: 'Wishlist', link: '#' },
     { icon: <Clock size={20} />, label: 'Recently Viewed', link: '#' },
     { icon: <Settings size={20} />, label: 'Settings', link: '#' },
-    { icon: <LogOut size={20} />, label: 'Logout', link: '#' },
+    
   ];
 
   if (loading) {

@@ -109,9 +109,10 @@ const Home = () => {
               </Link>
               <Link
                 to="/profile"
-                className="group relative px-4 py-2 rounded-full hover:bg-pink-50 transition-colors"
+                className="group relative hover:bg-pink-50 transition-colors px-8 py-4 rounded-full text-lg font-semibold border border-white/30 hover:bg-white/10 transition-colors"
               >
-                <User className="w-6 h-6 text-gray-700 group-hover:text-pink-600 transition-colors" />
+                <User className="w-16 h-6 text-gray-700 group-hover:text-pink-600 transition-colors" />
+              
               </Link>
             </div>
           </div>
