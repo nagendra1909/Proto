@@ -1,15 +1,118 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   User, Settings, ShoppingBag, Heart, Clock, LogOut, 
   MapPin, CreditCard, Bell, Shield, Gift, Truck,
-  Phone, Mail, Globe, Calendar, Camera, Upload
+  Phone, Mail, Globe, Calendar, Camera, Upload,
+  CheckCircle, XCircle
 } from 'lucide-react';
+import { useAuth } from '../contexts/AuthContext';
+import { auth } from '../firebase';
+import { getUserProfile, updateUserProfile, type UserProfile } from '../services/userService';
+import { useNavigate } from 'react-router-dom';
+
+const formInputClass = "w-full px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-pink-200 focus:border-pink-400 outline-none transition-all";
+const toggleClass = "relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2";
 
 const Profile = () => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    const loadProfile = async () => {
+      if (user?.uid) {
+        try {
+          const profile = await getUserProfile(user.uid);
+          if (profile) {
+            setUserProfile({
+              ...profile,
+              preferences: profile.preferences || {
+                emailNotifications: false,
+                smsNotifications: false,
+                marketingPreferences: false
+              },
+              address: profile.address || {},
+              security: profile.security || { twoFactorAuth: false }
+            });
+          }
+        } catch (error) {
+          setErrorMessage('Failed to load profile data');
+          console.error('Error loading profile:', error);
+        } finally {
+          setLoading(false);
+        }
+      }
+    };
+    loadProfile();
+  }, [user]);
+
+  const updateProfile = (updates: Partial<UserProfile>) => {
+    if (!userProfile) return;
+    
+    setUserProfile({
+      ...userProfile,
+      ...updates
+    });
+  };
+
+  const updateAddress = (field: string, value: string) => {
+    if (!userProfile) return;
+    
+    setUserProfile({
+      ...userProfile,
+      address: {
+        ...userProfile.address,
+        [field]: value
+      }
+    });
+  };
+
+  const updatePreferences = (field: string, value: boolean) => {
+    if (!userProfile) return;
+    
+    setUserProfile({
+      ...userProfile,
+      preferences: {
+        ...userProfile.preferences,
+        [field]: value
+      }
+    });
+  };
+
+  const handleSave = async () => {
+    if (!user?.uid || !userProfile) return;
+    
+    try {
+      setSaving(true);
+      setErrorMessage('');
+      await updateUserProfile(user.uid, userProfile);
+      setSuccessMessage('Profile updated successfully!');
+      setTimeout(() => setSuccessMessage(''), 3000);
+    } catch (error) {
+      setErrorMessage('Failed to update profile. Please try again.');
+      console.error('Error updating profile:', error);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigate('/auth');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
+  };
+
   const userInfo = {
-    name: "John Doe",
-    email: "john@example.com",
-    avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=John" // Placeholder avatar
+    name: userProfile?.name || user?.displayName || '',
+    email: userProfile?.email || user?.email || '',
+    avatar: userProfile?.avatar || user?.photoURL || `https://api.dicebear.com/7.x/avataaars/svg?seed=${user?.uid}`
   };
 
   const menuItems = [
@@ -21,9 +124,33 @@ const Profile = () => {
     { icon: <LogOut size={20} />, label: 'Logout', link: '#' },
   ];
 
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-4 border-pink-500 border-t-transparent"></div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-white py-12">
       <div className="max-w-6xl mx-auto px-4">
+        {/* Success Message */}
+        {successMessage && (
+          <div className="fixed top-4 right-4 flex items-center bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg shadow-lg">
+            <CheckCircle className="h-5 w-5 mr-2" />
+            {successMessage}
+          </div>
+        )}
+
+        {/* Error Message */}
+        {errorMessage && (
+          <div className="fixed top-4 right-4 flex items-center bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg shadow-lg">
+            <XCircle className="h-5 w-5 mr-2" />
+            {errorMessage}
+          </div>
+        )}
+
         <div className="grid md:grid-cols-4 gap-8">
           {/* Profile Sidebar */}
           <div className="md:col-span-1">
@@ -52,6 +179,13 @@ const Profile = () => {
                     <span>{item.label}</span>
                   </a>
                 ))}
+                <button
+                  onClick={handleLogout}
+                  className="flex items-center space-x-3 px-4 py-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors"
+                >
+                  <LogOut size={20} />
+                  <span>Logout</span>
+                </button>
               </nav>
             </div>
           </div>
@@ -94,23 +228,27 @@ const Profile = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-pink-200 focus:border-pink-400 outline-none transition-all"
-                    defaultValue={userInfo.name}
+                    className={formInputClass}
+                    value={userProfile?.name || ''}
+                    onChange={(e) => updateProfile({ name: e.target.value })}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                   <input
                     type="email"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-pink-200 focus:border-pink-400 outline-none transition-all"
-                    defaultValue={userInfo.email}
+                    className={formInputClass}
+                    value={userProfile?.email || ''}
+                    onChange={(e) => updateProfile({ email: e.target.value })}
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
                   <input
                     type="tel"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-pink-200 focus:border-pink-400 outline-none transition-all"
+                    className={formInputClass}
+                    value={userProfile?.phone || ''}
+                    onChange={(e) => updateProfile({ phone: e.target.value })}
                     placeholder="+1 (555) 000-0000"
                   />
                 </div>
@@ -118,17 +256,28 @@ const Profile = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Location</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:ring-2 focus:ring-pink-200 focus:border-pink-400 outline-none transition-all"
+                    className={formInputClass}
+                    value={userProfile?.location || ''}
+                    onChange={(e) => updateProfile({ location: e.target.value })}
                     placeholder="City, Country"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
-                  <input type="date" className="form-input" />
+                  <input
+                    type="date"
+                    className={formInputClass}
+                    value={userProfile?.dob || ''}
+                    onChange={(e) => updateProfile({ dob: e.target.value })}
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Gender</label>
-                  <select className="form-input">
+                  <select
+                    className={formInputClass}
+                    value={userProfile?.gender || ''}
+                    onChange={(e) => updateProfile({ gender: e.target.value })}
+                  >
                     <option>Select Gender</option>
                     <option>Male</option>
                     <option>Female</option>
@@ -137,7 +286,11 @@ const Profile = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Language</label>
-                  <select className="form-input">
+                  <select
+                    className={formInputClass}
+                    value={userProfile?.language || ''}
+                    onChange={(e) => updateProfile({ language: e.target.value })}
+                  >
                     <option>English</option>
                     <option>Spanish</option>
                     <option>French</option>
@@ -145,7 +298,11 @@ const Profile = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
-                  <select className="form-input">
+                  <select
+                    className={formInputClass}
+                    value={userProfile?.timezone || ''}
+                    onChange={(e) => updateProfile({ timezone: e.target.value })}
+                  >
                     <option>UTC-5 (Eastern Time)</option>
                     <option>UTC-8 (Pacific Time)</option>
                   </select>
@@ -159,27 +316,61 @@ const Profile = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Street Address</label>
-                  <input type="text" className="form-input" placeholder="123 Main St" />
+                  <input
+                    type="text"
+                    className={formInputClass}
+                    value={userProfile?.address?.street || ''}
+                    onChange={(e) => updateAddress('street', e.target.value)}
+                    placeholder="123 Main St"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Apartment/Unit</label>
-                  <input type="text" className="form-input" placeholder="Apt #" />
+                  <input
+                    type="text"
+                    className={formInputClass}
+                    value={userProfile?.address?.unit || ''}
+                    onChange={(e) => updateAddress('unit', e.target.value)}
+                    placeholder="Apt #"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">City</label>
-                  <input type="text" className="form-input" placeholder="City" />
+                  <input
+                    type="text"
+                    className={formInputClass}
+                    value={userProfile?.address?.city || ''}
+                    onChange={(e) => updateAddress('city', e.target.value)}
+                    placeholder="City"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">State/Province</label>
-                  <input type="text" className="form-input" placeholder="State" />
+                  <input
+                    type="text"
+                    className={formInputClass}
+                    value={userProfile?.address?.state || ''}
+                    onChange={(e) => updateAddress('state', e.target.value)}
+                    placeholder="State"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Postal Code</label>
-                  <input type="text" className="form-input" placeholder="Postal Code" />
+                  <input
+                    type="text"
+                    className={formInputClass}
+                    value={userProfile?.address?.postalCode || ''}
+                    onChange={(e) => updateAddress('postalCode', e.target.value)}
+                    placeholder="Postal Code"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Country</label>
-                  <select className="form-input">
+                  <select
+                    className={formInputClass}
+                    value={userProfile?.address?.country || ''}
+                    onChange={(e) => updateAddress('country', e.target.value)}
+                  >
                     <option>United States</option>
                     <option>Canada</option>
                     <option>United Kingdom</option>
@@ -198,7 +389,12 @@ const Profile = () => {
                     <p className="text-sm text-gray-500">Receive updates about your orders and account</p>
                   </div>
                   <div className="form-switch">
-                    <input type="checkbox" className="toggle" defaultChecked />
+                    <input
+                      type="checkbox"
+                      className={toggleClass}
+                      checked={userProfile?.preferences?.emailNotifications || false}
+                      onChange={(e) => updatePreferences('emailNotifications', e.target.checked)}
+                    />
                   </div>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
@@ -207,7 +403,12 @@ const Profile = () => {
                     <p className="text-sm text-gray-500">Get order updates via text message</p>
                   </div>
                   <div className="form-switch">
-                    <input type="checkbox" className="toggle" />
+                    <input
+                      type="checkbox"
+                      className={toggleClass}
+                      checked={userProfile?.preferences?.smsNotifications || false}
+                      onChange={(e) => updatePreferences('smsNotifications', e.target.checked)}
+                    />
                   </div>
                 </div>
                 <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
@@ -216,7 +417,12 @@ const Profile = () => {
                     <p className="text-sm text-gray-500">Receive personalized offers and updates</p>
                   </div>
                   <div className="form-switch">
-                    <input type="checkbox" className="toggle" />
+                    <input
+                      type="checkbox"
+                      className={toggleClass}
+                      checked={userProfile?.preferences?.marketingPreferences || false}
+                      onChange={(e) => updatePreferences('marketingPreferences', e.target.checked)}
+                    />
                   </div>
                 </div>
               </div>
@@ -232,17 +438,17 @@ const Profile = () => {
                     <input
                       type="password"
                       placeholder="Current Password"
-                      className="form-input"
+                      className={formInputClass}
                     />
                     <input
                       type="password"
                       placeholder="New Password"
-                      className="form-input"
+                      className={formInputClass}
                     />
                     <input
                       type="password"
                       placeholder="Confirm New Password"
-                      className="form-input"
+                      className={formInputClass}
                     />
                   </div>
                 </div>
@@ -254,7 +460,12 @@ const Profile = () => {
                       <p className="text-sm text-gray-500">Add an extra layer of security to your account</p>
                     </div>
                     <div className="form-switch">
-                      <input type="checkbox" className="toggle" />
+                      <input
+                        type="checkbox"
+                        className={toggleClass}
+                        checked={userProfile?.security?.twoFactorAuth || false}
+                        onChange={(e) => setUserProfile({ ...userProfile, security: { ...userProfile.security, twoFactorAuth: e.target.checked } })}
+                      />
                     </div>
                   </div>
                 </div>
@@ -263,8 +474,12 @@ const Profile = () => {
 
             {/* Save Changes Button */}
             <div className="flex justify-end">
-              <button className="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-opacity">
-                Save All Changes
+              <button
+                className="px-8 py-3 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-lg hover:opacity-90 transition-opacity"
+                onClick={handleSave}
+                disabled={saving}
+              >
+                {saving ? 'Saving...' : 'Save All Changes'}
               </button>
             </div>
           </div>

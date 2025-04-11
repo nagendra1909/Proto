@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import { auth } from '../firebase';
 import { 
   Search, 
   ShoppingBag, 
@@ -23,12 +25,16 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showChatbot, setShowChatbot] = useState(false);
   const [showProfileMenu, setShowProfileMenu] = useState(false);
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
-  const userRole = 'admin'; // Replace with actual authentication
-  const user = {
-    name: 'John Doe',
-    email: 'john@example.com',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John'
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigate('/auth');
+    } catch (error) {
+      console.error('Error signing out:', error);
+    }
   };
 
   const mainFeatures = [
@@ -83,36 +89,6 @@ const Navbar = () => {
 
             {/* Quick Actions */}
             <div className="flex items-center space-x-5">
-              {/* Action Buttons */}
-              <button className="p-2.5 hover:bg-pink-50 rounded-full relative group">
-                <Heart className="h-6 w-6 text-gray-600 group-hover:text-pink-600 transition-colors" />
-                <span className="absolute -top-1 -right-1 h-5 w-5 bg-pink-500 text-white text-xs rounded-full flex items-center justify-center group-hover:bg-pink-600 transition-colors">
-                  2
-                </span>
-              </button>
-
-              <button className="p-2.5 hover:bg-pink-50 rounded-full relative group">
-                <ShoppingCart className="h-6 w-6 text-gray-600 group-hover:text-pink-600 transition-colors" />
-                <span className="absolute -top-1 -right-1 h-5 w-5 bg-pink-500 text-white text-xs rounded-full flex items-center justify-center group-hover:bg-pink-600 transition-colors">
-                  3
-                </span>
-              </button>
-
-              <button className="p-2.5 hover:bg-pink-50 rounded-full relative group">
-                <Bell className="h-6 w-6 text-gray-600 group-hover:text-pink-600 transition-colors" />
-                <span className="absolute -top-1 -right-1 h-5 w-5 bg-pink-500 text-white text-xs rounded-full flex items-center justify-center group-hover:bg-pink-600 transition-colors">
-                  5
-                </span>
-              </button>
-
-              {/* AI Assistant */}
-              <button
-                onClick={() => setShowChatbot(!showChatbot)}
-                className="p-2.5 hover:bg-pink-50 rounded-full group"
-              >
-                <MessageSquare className="h-6 w-6 text-gray-600 group-hover:text-pink-600 transition-colors" />
-              </button>
-
               {/* Profile Menu */}
               <div className="relative">
                 <button
@@ -120,7 +96,7 @@ const Navbar = () => {
                   className="flex items-center space-x-2 p-1.5 hover:bg-pink-50 rounded-full transition-all group"
                 >
                   <img
-                    src={user.avatar}
+                    src={user?.photoURL || `https://api.dicebear.com/7.x/avataaars/svg?seed=${user?.uid}`}
                     alt="Profile"
                     className="w-9 h-9 rounded-full border-2 border-pink-200 group-hover:border-pink-400 transition-colors"
                   />
@@ -129,42 +105,34 @@ const Navbar = () => {
                 {showProfileMenu && (
                   <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-lg border border-gray-100 py-2 transform opacity-100 scale-100 transition-all">
                     <div className="px-4 py-3 border-b border-gray-100">
-                      <p className="text-sm font-semibold text-gray-800">{user.name}</p>
-                      <p className="text-xs text-gray-500">{user.email}</p>
-                      {userRole === 'admin' && (
-                        <span className="mt-1 inline-block px-2 py-0.5 text-xs bg-pink-100 text-pink-600 rounded-full">
-                          Admin
-                        </span>
-                      )}
+                      <p className="text-sm font-semibold text-gray-800">{user?.displayName || user?.email?.split('@')[0]}</p>
+                      <p className="text-xs text-gray-500">{user?.email}</p>
                     </div>
                     
                     <div className="py-2">
-                      <Link to="/profile" className="profile-menu-item">
+                      <Link to="/profile" className="profile-menu-item" onClick={() => setShowProfileMenu(false)}>
                         <User size={18} />
                         <span>Profile</span>
                       </Link>
-                      <Link to="/orders" className="profile-menu-item">
+                      <Link to="/orders" className="profile-menu-item" onClick={() => setShowProfileMenu(false)}>
                         <ShoppingBag size={18} />
                         <span>My Orders</span>
                       </Link>
-                      <Link to="/wishlist" className="profile-menu-item">
+                      <Link to="/wishlist" className="profile-menu-item" onClick={() => setShowProfileMenu(false)}>
                         <Heart size={18} />
                         <span>Wishlist</span>
                       </Link>
-                      <Link to="/settings" className="profile-menu-item">
+                      <Link to="/settings" className="profile-menu-item" onClick={() => setShowProfileMenu(false)}>
                         <Settings size={18} />
                         <span>Settings</span>
                       </Link>
-                      {userRole === 'admin' && (
-                        <Link to="/dashboard" className="profile-menu-item">
-                          <LineChart size={18} />
-                          <span>Dashboard</span>
-                        </Link>
-                      )}
                     </div>
                     
                     <div className="border-t border-gray-100 pt-2">
-                      <button className="profile-menu-item text-red-600 hover:bg-red-50">
+                      <button 
+                        onClick={handleLogout}
+                        className="profile-menu-item text-red-600 hover:bg-red-50"
+                      >
                         <LogOut size={18} />
                         <span>Logout</span>
                       </button>
