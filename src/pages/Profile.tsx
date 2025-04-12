@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { 
-  User, Settings, ShoppingBag, Heart, Clock, LogOut, 
-  MapPin, CreditCard, Bell, Shield, Gift, Truck,
-  Phone, Mail, Globe, Calendar, Camera, Upload,
-  CheckCircle, XCircle
+  User, 
+  Settings, 
+  ShoppingBag, 
+  Heart, 
+  Clock, 
+  LogOut, 
+  Camera,
+  CheckCircle, 
+  XCircle
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { auth } from '../firebase';
@@ -37,6 +42,21 @@ const Profile = () => {
               },
               address: profile.address || {},
               security: profile.security || { twoFactorAuth: false }
+            });
+          } else {
+            // Create a new profile if none exists
+            setUserProfile({
+              uid: user.uid,
+              name: user.displayName || '',
+              email: user.email || '',
+              avatar: user.photoURL || `https://api.dicebear.com/7.x/avataaars/svg?seed=${user.uid}`,
+              preferences: {
+                emailNotifications: false,
+                smsNotifications: false,
+                marketingPreferences: false
+              },
+              address: {},
+              security: { twoFactorAuth: false }
             });
           }
         } catch (error) {
@@ -78,6 +98,18 @@ const Profile = () => {
       ...userProfile,
       preferences: {
         ...userProfile.preferences,
+        [field]: value
+      }
+    });
+  };
+
+  const updateSecurity = (field: keyof UserProfile['security'], value: boolean) => {
+    if (!userProfile) return;
+    
+    setUserProfile({
+      ...userProfile,
+      security: {
+        ...userProfile.security,
         [field]: value
       }
     });
@@ -464,7 +496,7 @@ const Profile = () => {
                         type="checkbox"
                         className={toggleClass}
                         checked={userProfile?.security?.twoFactorAuth || false}
-                        onChange={(e) => setUserProfile({ ...userProfile, security: { ...userProfile.security, twoFactorAuth: e.target.checked } })}
+                        onChange={(e) => updateSecurity('twoFactorAuth', e.target.checked)}
                       />
                     </div>
                   </div>
