@@ -20,7 +20,7 @@ export interface UserProfile {
   language?: string;
   timezone?: string;
   createdAt?: string;
-  address: {
+  address?: {
     street?: string;
     unit?: string;
     city?: string;
