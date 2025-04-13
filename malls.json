@@ -1,0 +1,1091 @@
+{
+    "malls":[
+      {
+        "id": 1,
+        "name": "Wellingdon Plaza",
+        "place_id": "ChIJER9z8xNmUjoRtQdfSZIp0Ro",
+        "data_id": "0x3a526613f3731f11:0x1ad12992495f07b5",
+        "data_cid": "1932371423391582133",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526613f3731f11%3A0x1ad12992495f07b5&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526613f3731f11%3A0x1ad12992495f07b5&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0650496,
+          "lng": 80.2587034
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJER9z8xNmUjoRtQdfSZIp0Ro",
+        "provider_id": "/g/1hd_kwln_",
+        "rating": 4.3,
+        "reviews": 72,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "3785+2F8, Dr PV Cherian Crecent Salai, Egmore, Chennai, Tamil Nadu 600008, India",
+        "open_state": "Open ⋅ Closes 10:30 PM",
+        "hours": "Open ⋅ Closes 10:30 PM",
+     
+        "phone": "+91 44 3024 0110",
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMQZv55eUIWDZbflde0Acs5TFZrSIh675_fW5OI=w80-h106-k-no"
+      },
+      {
+        "id": 2,
+        "name": "Express Avenue",
+        "place_id": "ChIJcUUknJpdUjoRS1Okt6ChlYc",
+        "data_id": "0x3a525d9a9c244571:0x8795a1a0b7a4534b",
+        "data_cid": "9769892678297998155",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a525d9a9c244571%3A0x8795a1a0b7a4534b&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a525d9a9c244571%3A0x8795a1a0b7a4534b&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0584546,
+          "lng": 80.26418439999999
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJcUUknJpdUjoRS1Okt6ChlYc",
+        "provider_id": "/m/09gm09g",
+        "rating": 4.4,
+        "reviews": 103967,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "17, Pattullos Rd, Express Estate, Thousand Lights, Chennai, Tamil Nadu 600002, India",
+        "open_state": "Open ⋅ Closes 10 PM",
+        "hours": "Open ⋅ Closes 10 PM",
+    
+        "website": "https://expressavenue.in/",
+        "description": "Large shopping mall with restaurants. Sizable complex featuring a range of retailers & restaurants, plus cinemas & a boutique hotel.",
+        "extensions": [
+          {
+            "service_options": [
+              "In-store shopping",
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot",
+              "Wheelchair accessible restroom"
+            ]
+          },
+          {
+            "offerings": [
+              "Arcade games"
+            ]
+          },
+          {
+            "amenities": [
+              "Restroom"
+            ]
+          },
+          {
+            "payments": [
+              "Debit cards",
+              "NFC mobile payments"
+            ]
+          },
+          {
+            "parking": [
+              "Paid parking garage",
+              "Paid parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "in_store_shopping": true,
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPkrwmniActNUDM_hDuWLLwp2xhVJ-zJjb3ZdZ5=w167-h92-k-no"
+      },
+      {
+        "id": 3,
+        "name": "Parrys Corner Shopping",
+        "place_id": "ChIJZ531065vUjoRMsw-LIYM9N4",
+        "data_id": "0x3a526faed3f59d67:0xdef40c862c3ecc32",
+        "data_cid": "16065479541144865842",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526faed3f59d67%3A0xdef40c862c3ecc32&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526faed3f59d67%3A0xdef40c862c3ecc32&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0891235,
+          "lng": 80.2901625
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJZ531065vUjoRMsw-LIYM9N4",
+        "provider_id": "/g/11g2xhfvqy",
+        "rating": 4.2,
+        "reviews": 1317,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "37QR+J3V, Moore St, Parry's Corner, George Town, Chennai, Tamil Nadu 600001, India",
+        "open_state": "Open ⋅ Closes 9 PM",
+        "hours": "Open ⋅ Closes 9 PM",
+        "hours1": {
+          "saturday": "9 AM–9 PM",
+          "sunday": "10 AM–7:30 PM",
+          "monday": "9 AM–9 PM",
+          "tuesday": "9 AM–9 PM",
+          "wednesday": "9 AM–9 PM",
+          "thursday": "9 AM–9 PM",
+          "friday": "9 AM–9 PM"
+        },
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMqhgiNCiJiU-2i80tEY3UeN6zgRoGapvghyN7a=w138-h92-k-no"
+      },
+      {
+        "id": 4,
+        "name": "The Mall Of Madras",
+        "place_id": "ChIJQ_2Bb1xlUjoRH3uuJCuYg5s",
+        "data_id": "0x3a52655c6f81fd43:0x9b83982b24ae7b1f",
+        "data_cid": "11205967608894356255",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52655c6f81fd43%3A0x9b83982b24ae7b1f&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52655c6f81fd43%3A0x9b83982b24ae7b1f&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.1042852,
+          "lng": 80.2538442
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJQ_2Bb1xlUjoRH3uuJCuYg5s",
+        "provider_id": "/g/11v3s0ybsw",
+        "rating": 4.7,
+        "reviews": 16,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "SPR City, B&C Mills, 1, Stephenson Rd, Shanthi Nagar, Buckingham Carnatic Mills, Perambur, Chennai, Tamil Nadu 600012, India",
+        "open_state": "Open ⋅ Closes 5 PM",
+        "hours": "Open ⋅ Closes 5 PM",
+        "hours1": {
+          "saturday": "9 AM–5 PM",
+          "sunday": "9 AM–5 PM",
+          "monday": "9 AM–5 PM",
+          "tuesday": "9 AM–5 PM",
+          "wednesday": "9 AM–5 PM",
+          "thursday": "9 AM–5 PM",
+          "friday": "9 AM–5 PM"
+        },
+        "phone": "+91 75501 35333",
+        "website": "https://marketofindia.co.in/citizen-square.html",
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNmP3Ihe_26cCSdCK-hEtOTEFgglrQQ9fOH1zJK=w163-h92-k-no"
+      },
+      {
+        "id": 5,
+        "name": "Spectrum The Grand Venus Mall",
+        "place_id": "ChIJQa9yNbJlUjoRMKvKviAFX1E",
+        "data_id": "0x3a5265b23572af41:0x515f0520becaab30",
+        "data_cid": "5863410878057720624",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a5265b23572af41%3A0x515f0520becaab30&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a5265b23572af41%3A0x515f0520becaab30&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.1122705,
+          "lng": 80.2363842
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJQa9yNbJlUjoRMKvKviAFX1E",
+        "provider_id": "/m/0nbnypy",
+        "rating": 4,
+        "reviews": 13422,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "114, A, 114 B , 3rd floor, SPECTRUM THE GRAND VENUS MALL, Paper Mills Road, Gopal Colony, Perambur, Chennai, Tamil Nadu 600011, India",
+        "open_state": "Open ⋅ Closes 10 PM",
+        "hours": "Open ⋅ Closes 10 PM",
+        "hours1": {
+          "saturday": "10 AM–10 PM",
+          "sunday": "10 AM–10 PM",
+          "monday": "10 AM–10 PM",
+          "tuesday": "10 AM–10 PM",
+          "wednesday": "10 AM–10 PM",
+          "thursday": "10 AM–10 PM",
+          "friday": "10 AM–10 PM"
+        },
+        "description": "Upbeat mall with a food court & cinema. Family-friendly mall featuring local shops, a food court, a multiplex cinema & a game arcade.",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          },
+          {
+            "parking": [
+              "Paid parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNw2vswjHJuOaFvrutUMzBbA0WtMorYiI0QHQis=w122-h92-k-no"
+      },
+      {
+        "id": 6,
+        "name": "Bergamo Mall",
+        "place_id": "ChIJQUqRUGpmUjoRIeJUKM-sYRc",
+        "data_id": "0x3a52666a50914a41:0x1761accf2854e221",
+        "data_cid": "1684817741348135457",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52666a50914a41%3A0x1761accf2854e221&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52666a50914a41%3A0x1761accf2854e221&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.060792,
+          "lng": 80.25119289999999
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJQUqRUGpmUjoRIeJUKM-sYRc",
+        "provider_id": "/m/0nbv6pv",
+        "rating": 4.2,
+        "reviews": 2183,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "5/3, Khader Nawaz Khan Rd, Thousand Lights West, Thousand Lights, Chennai, Poombukar Nagar, Tamil Nadu 600006, India",
+        "open_state": "Open ⋅ Closes 9 PM",
+        "hours": "Open ⋅ Closes 9 PM",
+        "hours1": {
+          "saturday": "10:30 AM–9 PM",
+          "sunday": "10:30 AM–9 PM",
+          "monday": "10:30 AM–9 PM",
+          "tuesday": "10:30 AM–9 PM",
+          "wednesday": "10:30 AM–9 PM",
+          "thursday": "10:30 AM–9 PM",
+          "friday": "10:30 AM–9 PM"
+        },
+        "phone": "+91 44 4202 9875",
+        "website": "http://www.bergamo.in/",
+        "description": "Compact shopping & dining complex. Small, tranquil shopping center featuring restaurants & a cafe as well as local shops & services.",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot",
+              "Wheelchair accessible restroom"
+            ]
+          },
+          {
+            "amenities": [
+              "Restroom"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNb1HmYEUM94RttturUrbkPhZ9-jsPRAXPMK96Q=w80-h103-k-no"
+      },
+      {
+        "id": 7,
+        "name": "Wellington Plaza",
+        "place_id": "ChIJJQ1WKRpmUjoR1j-v8wvhbI8",
+        "data_id": "0x3a52661a29560d25:0x8f6ce10bf3af3fd6",
+        "data_cid": "10334882686357684182",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52661a29560d25%3A0x8f6ce10bf3af3fd6&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52661a29560d25%3A0x8f6ce10bf3af3fd6&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0655215,
+          "lng": 80.2678662
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJJQ1WKRpmUjoR1j-v8wvhbI8",
+        "provider_id": "/g/11clv9__bs",
+        "rating": 3.7,
+        "reviews": 280,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "1/1, Thiru. Vika. Rd, Border Thottam, Padupakkam, Triplicane, Chennai, Tamil Nadu 600002, India",
+        "open_state": "Open ⋅ Closes 8 PM",
+        "hours": "Open ⋅ Closes 8 PM",
+        "hours1": {
+          "saturday": "10 AM–8 PM",
+          "sunday": "10 AM–8 PM",
+          "monday": "10 AM–8 PM",
+          "tuesday": "10 AM–8 PM",
+          "wednesday": "10 AM–8 PM",
+          "thursday": "10 AM–8 PM",
+          "friday": "10 AM–8 PM"
+        },
+        "phone": "+91 44 2533 3444",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMy_tKm7TCu7rDP6mPITjZwrZoi4I8CuJwZ3Jnt=w163-h92-k-no"
+      },
+      {
+        "id": 8,
+        "name": "Spencer Plaza",
+        "place_id": "ChIJoz57ygdnUjoRTw7nvgkxf-0",
+        "data_id": "0x3a526707ca7b3ea3:0xed7f3109bee70e4f",
+        "data_cid": "17113451026958454351",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526707ca7b3ea3%3A0xed7f3109bee70e4f&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526707ca7b3ea3%3A0xed7f3109bee70e4f&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0614067,
+          "lng": 80.26130239999999
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJoz57ygdnUjoRTw7nvgkxf-0",
+        "provider_id": "/m/068chx",
+        "rating": 4,
+        "reviews": 29374,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "S-72, Spencer Plaza Mall, 769, Anna Salai, Chennai, Tamil Nadu 600002, India",
+        "open_state": "Open ⋅ Closes 10 PM",
+        "hours": "Open ⋅ Closes 10 PM",
+        "hours1": {
+          "saturday": "10 AM–10 PM",
+          "sunday": "10 AM–10 PM",
+          "monday": "10 AM–9 PM",
+          "tuesday": "10 AM–9 PM",
+          "wednesday": "10 AM–9 PM",
+          "thursday": "10 AM–9 PM",
+          "friday": "10 AM–9 PM"
+        },
+        "website": "https://www.spencerplaza.co.in/",
+        "description": "Time-tested complex with typical stores. Long-standing shopping mall featuring an array of common retailers, along with eateries.",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          },
+          {
+            "offerings": [
+              "Arcade games"
+            ]
+          },
+          {
+            "children": [
+              "Playground"
+            ]
+          },
+          {
+            "parking": [
+              "Free parking lot",
+              "Paid parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNJdTsHerEYZXBEObyeKnUSw3AQ66LQE9D4-tLY=w122-h92-k-no"
+      },
+      {
+        "id": 9,
+        "name": "Alsa Mall",
+        "place_id": "ChIJ__AS9RJmUjoR8i-cilQ1sCs",
+        "data_id": "0x3a526612f512f0ff:0x2bb035548a9c2ff2",
+        "data_cid": "3148074776750993394",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526612f512f0ff%3A0x2bb035548a9c2ff2&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526612f512f0ff%3A0x2bb035548a9c2ff2&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0687854,
+          "lng": 80.2573166
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ__AS9RJmUjoR8i-cilQ1sCs",
+        "provider_id": "/m/0dllydq",
+        "rating": 3.8,
+        "reviews": 7481,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "Egmore, Red Cross Rd, Chennai, Tamil Nadu 600008, India",
+        "open_state": "Open ⋅ Closes 10 PM",
+        "hours": "Open ⋅ Closes 10 PM",
+        "hours1": {
+          "saturday": "10 AM–10 PM",
+          "sunday": "10 AM–10 PM",
+          "monday": "10 AM–10 PM",
+          "tuesday": "10 AM–10 PM",
+          "wednesday": "10 AM–10 PM",
+          "thursday": "10 AM–10 PM",
+          "friday": "10 AM–10 PM"
+        },
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPOTNdmMiI5z_8N9kHbPvphXwnOcHWj4V38PMyl=w122-h92-k-no"
+      },
+      {
+        "id": 10,
+        "name": "Patni Plaza",
+        "place_id": "ChIJM6M8Y_hlUjoRh_BYIHEW460",
+        "data_id": "0x3a5265f8633ca333:0xade316712058f087",
+        "data_cid": "12529883263404667015",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a5265f8633ca333%3A0xade316712058f087&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a5265f8633ca333%3A0xade316712058f087&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0911371,
+          "lng": 80.27564509999999
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJM6M8Y_hlUjoRh_BYIHEW460",
+        "provider_id": "/g/11c467q0bc",
+        "rating": 4.1,
+        "reviews": 739,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "90, NSC Bose Rd, Sowcarpet, Badri Garden, George Town, Chennai, Tamil Nadu 600079, India",
+        "open_state": "Open ⋅ Closes 9 PM",
+        "hours": "Open ⋅ Closes 9 PM",
+        "hours1": {
+          "saturday": "10 AM–9 PM",
+          "sunday": "10 AM–2 PM",
+          "monday": "10 AM–9 PM",
+          "tuesday": "10 AM–9 PM",
+          "wednesday": "10 AM–9 PM",
+          "thursday": "10 AM–9 PM",
+          "friday": "10 AM–9 PM"
+        },
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          }
+        ],
+        "unsupported_extensions": [
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPFwQGUr88X2PBsLil2gHZh8yLVIcGVY4m6rO1y=w80-h106-k-no"
+      },
+      {
+        "id": 11,
+        "name": "Prince Plaza",
+        "place_id": "ChIJ-W9Q6Q1mUjoRXJlsZS2cvPI",
+        "data_id": "0x3a52660de9506ff9:0xf2bc9c2d656c995c",
+        "data_cid": "17491026771589241180",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52660de9506ff9%3A0xf2bc9c2d656c995c&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52660de9506ff9%3A0xf2bc9c2d656c995c&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0714217,
+          "lng": 80.2592844
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ-W9Q6Q1mUjoRXJlsZS2cvPI",
+        "provider_id": "/g/1tcw20m3",
+        "rating": 3.6,
+        "reviews": 1134,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "46, Pantheon Rd, Egmore, Chennai, Tamil Nadu 600008, India",
+        "open_state": "Open ⋅ Closes 9 PM",
+        "hours": "Open ⋅ Closes 9 PM",
+        "hours1": {
+          "saturday": "10 AM–9 PM",
+          "sunday": "10 AM–9 PM",
+          "monday": "10 AM–9 PM",
+          "tuesday": "10 AM–9 PM",
+          "wednesday": "10 AM–9 PM",
+          "thursday": "10 AM–9 PM",
+          "friday": "10 AM–9 PM"
+        },
+        "phone": "+91 85086 90942",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "amenities": [
+              "Restroom"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMJUaBISdoeLInlrmvMARIPJecwkSSbsSMxjOuo=w122-h92-k-no"
+      },
+      {
+        "id": 12,
+        "name": "EA Chambers",
+        "place_id": "ChIJEcKbVz1mUjoR08GlHdGiPrU",
+        "data_id": "0x3a52663d579bc211:0xb53ea2d11da5c1d3",
+        "data_cid": "13060054988450283987",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52663d579bc211%3A0xb53ea2d11da5c1d3&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52663d579bc211%3A0xb53ea2d11da5c1d3&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0586769,
+          "lng": 80.2634617
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJEcKbVz1mUjoR08GlHdGiPrU",
+        "provider_id": "/g/124yk_r1x",
+        "rating": 4.4,
+        "reviews": 6973,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "3757+F9G, Whites Road, Chennai Express Avenue, Pattullos Rd, Royapettah, Chennai, Tamil Nadu 600002, India",
+        "open_state": "Open ⋅ Closes 10 PM",
+        "hours": "Open ⋅ Closes 10 PM",
+        "hours1": {
+          "saturday": "10:01 AM–10 PM",
+          "sunday": "10:01 AM–10 PM",
+          "monday": "10:01 AM–10 PM",
+          "tuesday": "10:01 AM–10 PM",
+          "wednesday": "10:01 AM–10 PM",
+          "thursday": "10:01 AM–10 PM",
+          "friday": "10:01 AM–10 PM"
+        },
+        "website": "http://www.arieltechnologies.com/",
+        "description": "Huge shopping mall with dining & cinema. Vast mall with clothing, electronics & cosmetics stores, plus a food court, cinema & play area.",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          },
+          {
+            "offerings": [
+              "Arcade games"
+            ]
+          },
+          {
+            "parking": [
+              "Paid parking garage",
+              "Paid parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPne8dPi7csK8k2uqBPmFc_QUxmed8lEqxXpVLS=w80-h106-k-no"
+      },
+      {
+        "id": 13,
+        "name": "Sun Plaza",
+        "place_id": "ChIJE_LS00VmUjoRXbaqRM4viwc",
+        "data_id": "0x3a526645d3d2f213:0x78b2fce44aab65d",
+        "data_cid": "543580742990083677",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526645d3d2f213%3A0x78b2fce44aab65d&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526645d3d2f213%3A0x78b2fce44aab65d&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0496667,
+          "lng": 80.2482017
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJE_LS00VmUjoRXbaqRM4viwc",
+        "provider_id": "/g/11csb0dr9t",
+        "rating": 3.9,
+        "reviews": 309,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "19/39, Gopathi Narayanaswami Chetty Rd, Teynampet, Thiru Vi Ka Kudiyiruppu, Teynampet, Chennai, Tamil Nadu 600006, India",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipOyzR6P90gXh6KT4fQHyUZNLj4B-1Bq9FlKpOjV=w122-h92-k-no"
+      },
+      {
+        "id": 14,
+        "name": "Central",
+        "place_id": "ChIJq6qq-lZvUjoRRyi0_JYIGTo",
+        "data_id": "0x3a526f56faaaaaab:0x3a190896fcb42847",
+        "data_cid": "4186386773195368519",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526f56faaaaaab%3A0x3a190896fcb42847&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526f56faaaaaab%3A0x3a190896fcb42847&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0886625,
+          "lng": 80.2788126
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJq6qq-lZvUjoRRyi0_JYIGTo",
+        "provider_id": "/g/11hbgccdgv",
+        "rating": 4.3,
+        "reviews": 271,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "37QH+FG8, Sowcarpet, Peddanaickenpet, George Town, Chennai, Tamil Nadu 600001, India",
+        "open_state": "Closed ⋅ Opens 7:20 AM Tue",
+        "hours": "Closed ⋅ Opens 7:20 AM Tue",
+        "hours1": {
+          "saturday": "Closed",
+          "sunday": "Closed",
+          "monday": "Closed",
+          "tuesday": "7:20 AM–7:30 PM",
+          "wednesday": "Closed",
+          "thursday": "Closed",
+          "friday": "Closed"
+        },
+        "extensions": [
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          }
+        ],
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipP6TBqrHyIkAbmQiR-vy4B8W3lmMynBoX-vU-av=w204-h92-k-no"
+      },
+      {
+        "id": 15,
+        "name": "Ispahani Centre",
+        "place_id": "ChIJ3yBmBkJmUjoRnzMuOCvbDKs",
+        "data_id": "0x3a526642066620df:0xab0cdb2b382e339f",
+        "data_cid": "12325467258878833567",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526642066620df%3A0xab0cdb2b382e339f&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526642066620df%3A0xab0cdb2b382e339f&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.055246499999999,
+          "lng": 80.2497229
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ3yBmBkJmUjoRnzMuOCvbDKs",
+        "provider_id": "/g/1wc46dnr",
+        "rating": 4,
+        "reviews": 906,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "123, 124, Nungambakkam High Rd, Thousand Lights West, Thousand Lights, Chennai, Tamil Nadu 600034, India",
+        "open_state": "Open ⋅ Closes 9 PM",
+        "hours": "Open ⋅ Closes 9 PM",
+        "hours1": {
+          "saturday": "9:30 AM–9 PM",
+          "sunday": "9:30 AM–9 PM",
+          "monday": "9:30 AM–9 PM",
+          "tuesday": "9:30 AM–9 PM",
+          "wednesday": "9:30 AM–9 PM",
+          "thursday": "9:30 AM–9 PM",
+          "friday": "9:30 AM–9 PM"
+        },
+        "phone": "+91 44 2833 3697",
+        "extensions": [
+          {
+            "service_options": [
+              "In-store shopping",
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot",
+              "Wheelchair accessible restroom"
+            ]
+          },
+          {
+            "amenities": [
+              "Restroom"
+            ]
+          }
+        ],
+        "service_options": {
+          "in_store_shopping": true,
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPATjQQqCXJStMm7rskNwl8k79yrnsmtZzExRRS=w122-h92-k-no"
+      },
+      {
+        "id": 16,
+        "name": "SHOPPING SINGAPPORE",
+        "place_id": "ChIJI3tubbFlUjoRmlz_k4tAJ4o",
+        "data_id": "0x3a5265b16d6e7b23:0x8a27408b93ff5c9a",
+        "data_cid": "9954996469553388698",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a5265b16d6e7b23%3A0x8a27408b93ff5c9a&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a5265b16d6e7b23%3A0x8a27408b93ff5c9a&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.1100555,
+          "lng": 80.2439046
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJI3tubbFlUjoRmlz_k4tAJ4o",
+        "provider_id": "/g/124ydtx0n",
+        "rating": 4.1,
+        "reviews": 823,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "No:149, 65, Madhavaram High Rd, opposite RBCCC School, near canara bank, Madhavaram, Bunder Garden, Perambur, Chennai, Tamil Nadu 600011, India",
+        "open_state": "Open ⋅ Closes 10 PM",
+        "hours": "Open ⋅ Closes 10 PM",
+        "hours1": {
+          "saturday": "8:30 AM–10 PM",
+          "sunday": "8:30 AM–10 PM",
+          "monday": "8:30 AM–9:45 PM",
+          "tuesday": "8:30 AM–9:45 PM",
+          "wednesday": "8:30 AM–9:45 PM",
+          "thursday": "8:30 AM–9:45 PM",
+          "friday": "8:30 AM–9:45 PM"
+        },
+        "phone": "+91 72000 16584",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "payments": [
+              "Debit cards",
+              "NFC mobile payments"
+            ]
+          }
+        ],
+        "unsupported_extensions": [
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipMdJURjRW_L51ha79oNcDneys9ZD0EqhKrWMvqN=w122-h92-k-no"
+      },
+      {
+        "id": 17,
+        "name": "Shopping India",
+        "place_id": "ChIJ-QAGSVplUjoR0LdDwhRAR_c",
+        "data_id": "0x3a52655a490600f9:0xf7474014c243b7d0",
+        "data_cid": "17818280908617398224",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52655a490600f9%3A0xf7474014c243b7d0&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52655a490600f9%3A0xf7474014c243b7d0&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.087343599999999,
+          "lng": 80.24542579999999
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJ-QAGSVplUjoR0LdDwhRAR_c",
+        "provider_id": "/g/11rzrz6ts8",
+        "rating": 5,
+        "reviews": 3,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "147, 2nd St, Medavakkam, Purasaiwakkam, Chennai, Tamil Nadu 600010, India",
+        "open_state": "Open 24 hours",
+        "hours": "Open 24 hours",
+        "hours1": {
+          "saturday": "Open 24 hours",
+          "sunday": "Open 24 hours",
+          "monday": "Open 24 hours",
+          "tuesday": "Open 24 hours",
+          "wednesday": "Open 24 hours",
+          "thursday": "Open 24 hours",
+          "friday": "Open 24 hours"
+        },
+        "phone": "+91 89251 19853",
+        "extensions": [
+          {
+            "service_options": [
+              "In-store shopping"
+            ]
+          }
+        ],
+        "service_options": {
+          "in_store_shopping": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPDL9sQYiiD12UB-0NXh_aTBj1Dum_slhBDn6c=w152-h92-k-no"
+      },
+      {
+        "id": 18,
+        "name": "Singapore Shopping Centre",
+        "place_id": "ChIJh-xpGF9mUjoRNLU3XaI8P1g",
+        "data_id": "0x3a52665f1869ec87:0x583f3ca25d37b534",
+        "data_cid": "6358867866916730164",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52665f1869ec87%3A0x583f3ca25d37b534&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52665f1869ec87%3A0x583f3ca25d37b534&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.053946,
+          "lng": 80.2347451
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJh-xpGF9mUjoRNLU3XaI8P1g",
+        "provider_id": "/g/1q5glkrqf",
+        "rating": 3.6,
+        "reviews": 28,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "107, 107, Kodambakkam High Rd, Mahalingapuram, Nungambakkam, Chennai, Tamil Nadu 600034, India",
+        "open_state": "Open ⋅ Closes 10 PM",
+        "hours": "Open ⋅ Closes 10 PM",
+        "hours1": {
+          "saturday": "10 AM–10 PM",
+          "sunday": "10 AM–10 PM",
+          "monday": "10 AM–10 PM",
+          "tuesday": "10 AM–10 PM",
+          "wednesday": "10 AM–10 PM",
+          "thursday": "10 AM–10 PM",
+          "friday": "10 AM–10 PM"
+        },
+        "phone": "+91 98402 08970",
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPfYNz5WJ9pRmvRgPC9hNlR7UYJ4BxyPXpu8rUQ=w80-h142-k-no"
+      },
+      {
+        "id": 19,
+        "name": "Corporate Sports Club",
+        "place_id": "ChIJRQOFA2lmUjoRGAon6kLqojg",
+        "data_id": "0x3a52666903850345:0x38a2ea42ea270a18",
+        "data_cid": "4081081785468258840",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a52666903850345%3A0x38a2ea42ea270a18&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a52666903850345%3A0x38a2ea42ea270a18&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.055245099999999,
+          "lng": 80.2497236
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJRQOFA2lmUjoRGAon6kLqojg",
+        "provider_id": "/g/11fylk94bf",
+        "rating": 4,
+        "reviews": 1029,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "#123, 7th Floor, Ispahani Centre, Nungambakkam, Chennai, Tamil Nadu 600034, India",
+        "open_state": "Open ⋅ Closes 11 PM",
+        "hours": "Open ⋅ Closes 11 PM",
+        "hours1": {
+          "saturday": "10 AM–11 PM",
+          "sunday": "10 AM–11 PM",
+          "monday": "10 AM–11 PM",
+          "tuesday": "10 AM–11 PM",
+          "wednesday": "10 AM–11 PM",
+          "thursday": "10 AM–11 PM",
+          "friday": "10 AM–11 PM"
+        },
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipPi5FKG35M_LWvLOsLBnqR0Mbd_qSFIQjSIIDT1=w122-h92-k-no"
+      },
+      {
+        "id": 20,
+        "name": "Shoppers stop car parking",
+        "place_id": "ChIJi_vi1XRnUjoRg7chUcOoGtE",
+        "data_id": "0x3a526774d5e2fb8b:0xd11aa8c35121b783",
+        "data_cid": "15067541060154668931",
+        "reviews_link": "https://serpapi.com/search.json?data_id=0x3a526774d5e2fb8b%3A0xd11aa8c35121b783&engine=google_maps_reviews&hl=en",
+        "photos_link": "https://serpapi.com/search.json?data_id=0x3a526774d5e2fb8b%3A0xd11aa8c35121b783&engine=google_maps_photos&hl=en",
+        "position": {
+          "lat": 13.0689958,
+          "lng": 80.2414919
+        },
+        "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=en&place_id=ChIJi_vi1XRnUjoRg7chUcOoGtE",
+        "provider_id": "/g/11grpqs39c",
+        "rating": 4.1,
+        "reviews": 39,
+        "unclaimed_listing": true,
+        "type": "Shopping mall",
+        "types": [
+          "Shopping mall"
+        ],
+        "type_id": "shopping_center",
+        "type_ids": [
+          "shopping_center"
+        ],
+        "address": "KRM Towers, 9, 2, Harrington Rd, Chetpet, Chennai, Tamil Nadu 600031, India",
+        "open_state": "Open ⋅ Closes 8 PM",
+        "hours": "Open ⋅ Closes 8 PM",
+        "hours1": {
+          "saturday": "10 AM–8 PM",
+          "sunday": "Closed",
+          "monday": "10 AM–8 PM",
+          "tuesday": "10 AM–8 PM",
+          "wednesday": "10 AM–8 PM",
+          "thursday": "10 AM–8 PM",
+          "friday": "10 AM–8 PM"
+        },
+        "phone": "+91 44 4397 2626",
+        "website": "https://www.shoppersstop.com/store-finder",
+        "extensions": [
+          {
+            "service_options": [
+              "Onsite services"
+            ]
+          },
+          {
+            "accessibility": [
+              "Wheelchair accessible entrance",
+              "Wheelchair accessible parking lot"
+            ]
+          }
+        ],
+        "service_options": {
+          "onsite_services": true
+        },
+        "thumbnail": "https://lh3.googleusercontent.com/p/AF1QipNDjjXHcPIFfYtDBvl7RtZJmy5ghjIKkooZviG0=w80-h142-k-no"
+      }
+    ]
+  }
