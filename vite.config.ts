@@ -1,10 +1,18 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
-});
+  build: {
+    chunkSizeWarningLimit: 1600, // Increase size limit (in kBs)
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'; // Group all node_modules in one chunk
+          }
+        }
+      }
+    }
+  }
+})
